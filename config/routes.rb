@@ -1,4 +1,4 @@
-BaseApp::Application.routes.draw do
+EOffice::Application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
@@ -9,6 +9,7 @@ BaseApp::Application.routes.draw do
   namespace "admin" do
 
     resources :users
+    resources :mail_classifications
 
   end
 

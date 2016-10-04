@@ -1,0 +1,37 @@
+<div class="page-header">
+  <h1>Mail Classifications</h1>
+</div>
+
+<%= search_form_for @q, :url => admin_mail_classifications_path, :html => { :method => :get, :class => "well form-inline" } do |f| %>
+  <div class="form-group">
+    <%= f.text_field :name, :type => "search", :class => "form-control", :placeholder => "Search by name" %>
+  </div>
+
+  <%= f.submit "Search", :class => "btn btn-default" %>
+<% end %>
+
+<table class="sortable table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th><%= sortable "mail_classification.code", "Kode" %></th>
+      <th><%= sortable "mail_classification.name", "Nama" %></th>
+      <th><%= sortable "mail_classification.description", "Keterangan" %></th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @mail_classifications.each do |mail_classifications| %>
+      <tr class="mail_classifications">
+        <td><%= link_to(mail_classifications.code, admin_mail_classifications_path(mail_classification)) %></td>
+        <td><%= link_to(mail_classifications.name, admin_mail_classifications_path(mail_classification)) %></td>
+        <td><%= mail_classifications.description %></td>
+        <td><%= link_to 'Edit', edit_admin_mail_classifications_path(mail_classification) %></td>
+        <td><%= link_to 'Destroy', admin_mail_classifications_path(mail_classification), :data => { :confirm => 'Are you sure?' }, :method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Mail Classification', new_admin_mail_classification_path %>
+<%= paginate @mail_classifications %>

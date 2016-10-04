@@ -21,6 +21,10 @@ gem "omniauth-facebook"
 gem "kaminari"
 gem "ransack"
 gem "dynamic_form"
+gem "simple_form"
+gem 'turbolinks'
+gem 'ckeditor'
+gem 'paperclip'
 
 group :test, :development do
   gem "rspec-rails"
