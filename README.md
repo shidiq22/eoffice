@@ -4,7 +4,7 @@ A base Rails 4 application. Features user and admin system with Facebook login. 
 
 The view is implemented using [Bootstrap 3](http://getbootstrap.com/).
 
-Here's a [live demo](http://rt-baseapp.herokuapp.com/). Just note that environment variables for Facebook login are not set so logging in that way will not work.
+Here's a [live demo](http://eoffice.herokuapp.com/). Just note that environment variables for Facebook login are not set so logging in that way will not work.
 
 <a href="https://semaphoreapp.com/renderedtext/base-app"><img src="https://semaphoreapp.com/api/v1/projects/73c4b979-0a40-49db-b10e-571d41e10d9a/133529/badge.png"></a>
 
